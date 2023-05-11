@@ -1,0 +1,415 @@
+$max-width: 1070px;
+$container-margin: 0 auto;
+$main-blue: #1a458a;
+$main-orange: #ed691c;
+
+// We define the mixins for two major breakpoints mobile and tablet
+ 
+ // $breakpoint is the variable that can have several values
+ @mixin devices ($breakpoint) { //the name of the mixin is devices
+  
+  @if $breakpoint == tablet {    
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 481px) {
+      @content;
+    }
+  }
+}
+
+// header //
+
+.openbtn1{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  background:#57a2c7;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background: #fff;
+    width: 45%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+/*========= レイアウトのためのCSS ===============*/
+
+
+// .links li:before {
+//   position:absolute;
+//   content:'';
+//   top: 0.4em;
+//   left: 0.2em;
+//   height:0;
+//   width:0;
+//   border-style: solid;
+//   border-width: 6px 0 6px 9px;
+//   border-color: transparent transparent transparent #333333;
+// }
+
+.links li a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: $main-blue;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.links li a:hover::after {
+  transform: scale(1, 1);
+}
+
+// common //
+
+body {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h2 {
+  color: $main-blue;
+}
+
+.global-header-container {
+  width: $max-width;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 50px;
+
+  a {
+    height: 50px;
+    width: auto;
+
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+
+  .global-header-nav {
+    height: 50px;
+    
+    .links {
+      display: flex;
+      height: 50px;
+  
+      li {
+        list-style: none;
+        margin-left: 40px;
+        font-size: 1em;
+        position: relative;
+        padding: 0em 0.3em 0.3em 1.3em;
+  
+        a {
+          text-decoration: none;
+          color: $main-blue;
+          position: relative;
+        }
+      }
+    }
+  }
+  
+}
+
+.links {
+  color: $main-blue;
+}
+
+.container {
+  width: $max-width;
+  margin: $container-margin;
+}
+
+.mv {
+  background-image: url(../img/frisbees.jpg);
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+
+  .mv-container {
+    width: $max-width;
+    margin: $container-margin;
+
+    .main-box {
+      padding-top: 300px;
+
+      .mv-button {
+        margin-top: 37px;
+  
+        button {
+          background-color: $main-orange;
+          padding: 15px 60px;
+          border-color: unset;
+          border-radius: 10px;
+          border-style: none;
+          color: #fff;
+        }
+      }
+    }
+
+  }
+
+}
+
+section {
+  margin-top: 70px;
+}
+
+.upcoming-events {
+
+  .event-boxes {
+    display: flex;
+    justify-content: space-around;
+
+    .one-box {
+      border-radius: 10px;
+      border: solid $main-blue 2px;
+      padding: 7px;
+      width: 260px;
+
+      a {
+        text-decoration: none;
+        color: $main-blue;
+
+        :visited {
+          color: $main-blue;
+        }
+
+        .box-image {
+          display: flex;
+          justify-content: center;
+
+          img {
+            border-radius: 10px;
+            width: 260px;
+            height: 150px;
+            object-fit: cover;
+          }
+        }
+
+        .box-text-box {
+
+          p {
+            color: $main-blue;
+          }
+
+          .text-small {
+            margin-top: 15px;
+            margin-bottom: 0;
+            padding-left: 15px;
+          }
+
+          .bold {
+            margin-top: 3px;
+            padding-left: 15px;
+          }
+
+          .box-text-box-fix {
+            padding-left: 10px;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+// Upcoming events - zoom in //
+
+.one-box {
+  position: relative;
+  max-width: 260px;
+  margin-right: 5%;
+  width: 60%;
+  margin-bottom: 55px;
+}
+
+.one-box a {
+  text-decoration: none;
+  color: #3e3a39;
+}
+
+.box-image {
+  overflow: hidden; /*拡大時にはみ出た部分を隠す*/
+  max-width: 260px; /*画像の幅*/
+  max-height: 460px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.box-image img {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.box-image img:hover {
+  transform: scale(1.2); /*画像の拡大率指定*/
+}
+
+// Past events //
+
+.past-events {
+  .news-contents {
+    width: 90%;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      padding:10px 20px;
+      outline: none;
+      /*アニメーションの指定*/
+      transition: all .3s;
+
+      display: flex;
+      border-bottom: 1px solid #dcdcdc;
+      padding-left: 10px;
+        
+
+        .date {
+          padding-right: 30%;
+        }
+    }
+    
+  }
+}
+
+.content:hover {
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+  border-color: transparent;
+}
+
+// Contact us //
+
+.contact-contents {
+  display: flex;
+
+  a {
+    text-decoration: none;
+
+    .sns-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 30px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.change-color {
+  background-color: $main-blue;
+  transition: 0.3s;
+  height: auto;
+}
+
+.text-color {
+  color: #fff !important;
+}
+
+// .global-header-container {
+//   display: flex;
+//   align-items: center;
+// }
+
+.global-header-nav {
+  margin-left: auto;
+}
+
+.js-headLinks {
+  display: flex;
+  margin-bottom: 0;
+}
+
+// .js-headLinks li a {
+//   display: block;
+// }
+
+.mv {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.mv::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
