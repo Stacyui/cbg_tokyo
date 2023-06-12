@@ -13,6 +13,18 @@
   text-decoration: none;
 }
 
+.sp-area {
+  display: none;
+}
+
+.pc-area {
+  display: block;
+}
+
+.br-sp {
+  display: none;
+}
+
 .links li a:hover::after {
   transform: scale(1, 1);
 }
@@ -90,24 +102,39 @@ h2 {
   background-size: cover;
   width: 100%;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
+
+
+
 .mv .mv-container {
   width: 1070px;
   margin: 0 auto;
 }
+
 .mv .mv-container .main-box {
   padding-top: 300px;
 }
-.mv .mv-container .main-box .mv-button {
-  margin-top: 37px;
+
+.mv .mv-container .main-box .mv-text-box {
+  margin-bottom: 50px;
 }
-.mv .mv-container .main-box .mv-button button {
+
+.mv .mv-container .main-box .mv-button {
   background-color: #ed691c;
-  padding: 15px 60px;
+  padding: 15px 30px;
   border-color: unset;
   border-radius: 10px;
   border-style: none;
   color: #fff;
+  text-decoration: none;
+}
+
+.jump_point {
+  display: block;
+  padding-top: 120px;
+  margin-top: -120px;
 }
 
 section {
@@ -116,7 +143,7 @@ section {
 
 .upcoming-events .event-boxes {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .upcoming-events .event-boxes .one-box {
   border-radius: 10px;
@@ -248,20 +275,91 @@ section {
   margin-bottom: 0;
 }
 
-.mv {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
+footer {
+  background-color: #1a458a;
 }
 
-.mv::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.footer-container p {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .pc-area {
+    display: none;
+  }
+
+  .sp-area {
+    display: block;
+  }
+
+  .br-sp {
+    display: block;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .mv {
+    background-image: url(../img/frisbees.jpg);
+    background-size: cover;
+    width: 100%;
+  }
+
+  .mv .mv-container {
+    width: 100% !important;
+  }
+
+  .mv .mv-container .main-box .mv-text-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .mv .mv-container .main-box {
+    padding: 220px 20px 0;
+  }
+
+  .mv .mv-container .main-box p {
+    color: #fff;
+    padding-top: 40px;
+  }
+
+  .upcoming-events h2 {
+    text-align: center;
+  }
+
+  .upcoming-events .event-boxes .one-box {
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+  }
+
+  .past-events h2 {
+    text-align: center;
+  }
+
+  .past-events .news-contents a .date {
+    padding-right: 7% !important;
+  }
+
+  .past-events .news-contents a {
+    padding: 10px;
+  }
+
+  .contact-us h2 {
+    text-align: center;
+  }
+
+  .contact-contents {
+    justify-content: center;
+  }
+
+  .contact-contents a .sns-icon {
+    margin-right: 0 !important;
+  }
 }

@@ -17,3 +17,27 @@ $(function () {
 $(".openbtn1").click(function () {
     $(this).toggleClass('active');
 });
+
+
+$(function(){
+    function sliderSetting(){
+ 
+        var width = $(window).width();
+ 
+        if(width <= 768){
+            $('.event-boxes').not('.slick-initialized').slick({
+                autoplay: false,
+                dots: true,
+                arrows: true
+            });
+        } else {
+            $('.slide.slick-initialized').slick('unslick');
+        }
+    }
+ 
+    sliderSetting();
+ 
+    $(window).resize( function() {
+        sliderSetting();
+    });
+});

@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Casual Beginner's Gym Tokyo</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/assets/slick/slick-theme.css"/>
 </head>
 <body>
-    <header class="global-header js-scrollHeader">
-        <div class="openbtn1"><span></span><span></span><span></span></div>
-
+    <header class="global-header js-scrollHeader pc-area">
+        <!-- <div class="openbtn1"><span></span><span></span><span></span></div> -->
         <div class="global-header-container">
-            <a class="logo" href="#"><img src="https://placehold.jp/70x70.png" alt=""></a>
+            <a class="logo" href="#"><img src="/assets/img/logo.jpg" alt=""></a>
             <nav class="global-header-nav">
                 <ul class="links js-headLinks">
-                    <li><a href="" class="link-item">Upcoming Events</a></li>
-                    <li><a href="" class="link-item">Past Events</a></li>
-                    <li><a href="" class="link-item">Contact Us</a></li>
+                    <li><a href="#up-coming" class="link-item">Upcoming Events</a></li>
+                    <li><a href="#past" class="link-item">Past Events</a></li>
+                    <li><a href="#contact" class="link-item">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,11 +32,12 @@
             <div class="mv-container">
                 <div class="main-box">
                     <div class="mv-text-box">
-                        <h1>text text text</h1>
-                        <p>Example example example<br>Example example example</p>
+                        <h1>Casual Beginner's Gym<br class="br-sp">Tokyo</h1>
+                        <p>We C.B.gym are brandnew community for sports lovers since January 2023. <br class="br-sp">Stands for “Casual Beginner’s Gym”.<br>
+                        Open for beginners who want to try new sports.</p>
                     </div>
-                    <a href="#" class="mv-button">
-                        <button>Learn more</button>
+                    <a href="https://meetu.ps/c/524nr/Vhjlp/a" target="_blank" class="mv-button">
+                        Join Our Meetup Group
                     </a>
                 </div>
             </div>
@@ -41,7 +45,7 @@
 
         <div class="container">
             <section class="upcoming-events">
-                <h2>Upcoming events</h2>
+                <h2 class="jump_point" id="up-coming">Upcoming events</h2>
                 <div class="event-boxes">
 
                     <div class="one-box">
@@ -87,7 +91,7 @@
             </section>
 
             <section class="past-events">
-                <h2>Past events</h2>
+                <h2 class="jump_point" id="past">Past events</h2>
                 <div class="news-contents">
                     <a href="#" class="content">
                         <div class="date">
@@ -119,29 +123,39 @@
             </section>
 
             <section class="contact-us">
-                <h2>Contact us</h2>
+                <h2 class="jump_point" id="contact">Contact us</h2>
                 <div class="contact-contents">
-                    <a href="#">
+                    <a href="https://line.me/ti/g/lnXLw8UwUV">
                         <div class="sns-icon">
                             <img src="./assets/img/line.png" alt="">
                         </div>
                     </a>
-                    <a href="#">
+                    <!-- <a href="#">
                         <div class="sns-icon">
                             <img src="./assets/img/instagram.png" alt="">
                         </div>
-                    </a>
+                    </a> -->
                 </div>
             </section>
         </div>
     </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>Casual Beginner's Gym Tokyo 2023</p>
+        </div>
+    </footer>
 
     <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="./assets/js/all.js"></script>
-    
+    <script type="text/javascript" src="/assets/js/all.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/slick/slick.min.js"></script>
+
 </body>
 </html>
