@@ -16,11 +16,11 @@
     <header class="global-header js-scrollHeader pc-area">
         <!-- <div class="openbtn1"><span></span><span></span><span></span></div> -->
         <div class="global-header-container">
-            <a class="logo" href="#"><img src="assets/img/logo.jpg" alt=""></a>
+            <img src="assets/img/logo.jpg" alt="logo">
             <nav class="global-header-nav">
                 <ul class="links js-headLinks">
                     <li><a href="#up-coming" class="link-item">Upcoming Events</a></li>
-                    <!-- <li><a href="#past" class="link-item">Past Events</a></li> -->
+                    <li><a href="#about-us" class="link-item">About Us</a></li>
                     <li><a href="#contact" class="link-item">Contact Us</a></li>
                 </ul>
             </nav>
@@ -122,54 +122,103 @@
                 </div>
             </section> -->
 
-            <section class="sports">
-                <h2>What kind of sports do we play?</h2>
-                <div class="container">
-                    <div class="sport-tab-wrap js-tab-wrap" id="sport-info">
-                      <button class="dress-tab dress-tab-floor-ball js-tab is-active" data-tab-relation="floorball">
-                        <p>Floor Ball</p>
-                      </button>
-                      <button class="dress-tab dress-tab-volleyball js-tab" data-tab-relation="volleyball">
-                        <p>Volley Ball</p>
-                      </button>
-                      <button class="dress-tab dress-tab-happy js-tab" data-tab-relation="happy">
-                        <p>Happy</p>
-                      </button>
-                      <button class="dress-tab dress-tab-happy js-tab" data-tab-relation="test2">
-                        <p>test</p>
-                      </button>
-                      <button class="dress-tab dress-tab-happy js-tab" data-tab-relation="test3">
-                        <p>test</p>
-                      </button>
+            <section class="about-us" id="about-us">
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro similique natus accusamus soluta praesentium. Unde, magni quis sed architecto aliquam error maiores earum magnam suscipit. Corporis quos rerum sunt sint.</p>
+                <h2 class="mt50">What kind of sports do we play?</h2>
+                <div class="sports-tab-wrap">
+                    <div class="sport-tab">
+                        <button id="floorball" class='secList'>Floorball</button>
+                    </div>
+                      
+                    <div class="sport-tab">
+                        <button id="volleyball" class='secList'>Volleyball</button>
+                    </div>
+                      
+                    <div class="sport-tab">
+                        <button id="softball" class='secList'>Softball</button>
+                    </div>
+
+                    <div class="sport-tab">
+                        <button id="test1" class='secList'>test1</button>
+                    </div>
+
+                    <div class="sport-tab">
+                        <button id="andmore" class='secList'>and more..</button>
                     </div>
                 </div>
-                <div class="dress-tab-display-wrap js-tab-display-wrap">
-                    <div class="sport-tab-display js-tab-display is-show"  data-tab-relation="floorball">
-                      <div class="container">
-                        <div class="floor-ball-wrap">
-                          <p>test 1</p>
+                
+                <!-- Sections -->
+                <div class="js-tab-display-wrap">
+                    <div class="floorball js-tab-display is-current">
+                        <h3>Floorball</h3>
+                        <p>Floorball or floor hockey is a team sport that is played indoors on a gym floor with specialized lightweight sticks and a plastic ball with holes.</p>
+                        <div class="img-box">
+                            <img src="https://placehold.jp/300x150.png" alt="Floorball">
                         </div>
-                      </div>
                     </div>
-          
-                    <div class="sport-tab-display js-tab-display"  data-tab-relation="volleyball">
-                        <div class="container">
-                            <div class="news_wrap">
-                              <p>test 2</p>
+                    
+                    <div class="volleyball js-tab-display">
+                        <h3>Volleyball</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum corrupti, quis amet cumque a illo consequuntur numquam eos culpa qui!</p>
+                        <div class="img-box">
+                            <img src="https://placehold.jp/300x150.png" alt="Volleyball">
+                        </div>
+                    </div>
+                    
+                    <div class="softball js-tab-display">
+                        <h3>Softball</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laborum qui perspiciatis, inventore nulla tempore.</p>
+                        <div class="img-box">
+                            <img src="https://placehold.jp/300x150.png" alt="Softball">
+                        </div>
+                    </div>
+
+                    <div class="test1 js-tab-display">
+                        <h3>Section4</h3>
+                        <p>hoge3</p>
+                    </div>
+
+                    <div class="andmore js-tab-display">
+                        <div class="display-2column">
+                            <div class="display-item">
+                                <h3>Mölkky</h3>
+                                <div class="img-box">
+                                    <img src="https://placehold.jp/300x150.png" alt="Mölkky">
+                                </div>
+                            </div>
+                            <div class="display-item">
+                                <h3>Handball</h3>
+                                <div class="img-box">
+                                    <img src="https://placehold.jp/300x150.png" alt="Handball">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-2column">
+                            <div class="display-item">
+                                <h3>Yoga</h3>
+                                <div class="img-box">
+                                    <img src="https://placehold.jp/300x150.png" alt="Yoga">
+                                </div>
+                            </div>
+                            <div class="display-item">
+                                <h3>Basketball</h3>
+                                <div class="img-box">
+                                    <img src="https://placehold.jp/300x150.png" alt="Basketball">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-2column">
+                            <div class="display-item">
+                                <h3>Touch Rugby</h3>
+                                <div class="img-box">
+                                    <img src="https://placehold.jp/300x150.png" alt="Touch Rugby">
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="sport-tab-display js-tab-display"  data-tab-relation="happy">
-                        <div class="container">
-                            <div class="news_wrap">
-                              <p>test 3</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
+                
             </section>
 
 
