@@ -262,6 +262,7 @@ section {
   color: #1a458a;
   height: 50px;
   width: 150px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .is-current {
