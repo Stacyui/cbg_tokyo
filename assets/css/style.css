@@ -13,6 +13,10 @@
   text-decoration: none;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .sp-area {
   display: none;
 }
@@ -29,8 +33,13 @@
   transform: scale(1, 1);
 }
 
+.mt50 {
+  margin-top: 50px;
+}
+
 body {
   margin: 0;
+  min-width: 1080px;
 }
 
 header {
@@ -60,7 +69,7 @@ h2 {
   align-items: flex-end;
   height: 50px;
 }
-.global-header-container a {
+.global-header-container img {
   height: 50px;
   width: auto;
 }
@@ -92,7 +101,7 @@ h2 {
   color: #1a458a;
 }
 
-.container {
+.contents {
   width: 1070px;
   margin: 0 auto;
 }
@@ -100,25 +109,25 @@ h2 {
 .mv {
   background-image: url(../img/frisbees.jpg);
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   position: relative;
   z-index: 1;
 }
 
-
-
 .mv .mv-container {
-  width: 1070px;
+  max-width: 1070px;
   margin: 0 auto;
 }
 
 .mv .mv-container .main-box {
-  padding-top: 300px;
+  /* padding-top: 300px; */
+  position: absolute;
+  top: 40%;
 }
 
-.mv .mv-container .main-box .mv-text-box {
-  margin-bottom: 50px;
+.mv-button-box {
+  margin-top: 50px;
 }
 
 .mv .mv-container .main-box .mv-button {
@@ -145,6 +154,7 @@ section {
   display: flex;
   justify-content: center;
 }
+
 .upcoming-events .event-boxes .one-box {
   border-radius: 10px;
   border: solid #1a458a 2px;
@@ -187,7 +197,7 @@ section {
 .one-box {
   position: relative;
   max-width: 260px;
-  margin-right: 5%;
+  margin: 0 20px;
   width: 60%;
   margin-bottom: 55px;
 }
@@ -235,9 +245,65 @@ section {
   padding-right: 30%;
 }
 
-.content:hover {
-  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
-  border-color: transparent;
+/* what kinf of sport ~~~ */
+.sports-tab-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.sports-tab-wrap .sport-tab {
+  margin: 0 15px;
+}
+
+.sports-tab-wrap .sport-tab button {
+  background-color: #fff;
+  border: unset;
+  border-radius: 10px;
+  border: 2px #1a458a solid;
+  color: #1a458a;
+  height: 50px;
+  width: 150px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.is-current {
+  background-color: #1a458a !important;
+  color: #fff !important;
+}
+
+.sports-tab-wrap .sport-tab button:hover {
+  background-color: #577fbf;
+}
+
+.js-tab-display-wrap {
+  margin: 30px 100px;
+  display: flex;
+}
+
+.js-tab-display .img-box img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.display-item .img-box img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.andmore {
+  width: 100%;
+}
+
+.display-2column {
+  display: flex;
+  justify-content: center;
+  margin: 0 70px;
+}
+
+.display-item {
+  margin: 0 50px 0 50px;
 }
 
 .contact-contents {
@@ -245,11 +311,11 @@ section {
 }
 .contact-contents a {
   text-decoration: none;
+  margin-right: 30px;
 }
 .contact-contents a .sns-icon {
   width: 50px;
   height: 50px;
-  margin-right: 30px;
 }
 .contact-contents a .sns-icon img {
   width: 50px;
@@ -290,7 +356,49 @@ footer {
   color: #fff;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1039px) {
+
+  .global-header-container {
+    width: unset;
+    margin: 0.625rem 0.938rem;
+  }
+
+  .upcoming-events h2 {
+    text-align: center;
+  }
+
+  .text-box {
+    margin: 0 5rem;
+  }
+
+  .contact-contents {
+    margin: 0 5rem;
+  }
+
+  .mv .mv-container {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .mv .mv-container .main-box {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+
+  .mv .mv-container .main-box .mv-text-box h1 {
+    color: #fff;
+    text-shadow: 2px 2px 3px #292929;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  body {
+    min-width: initial;
+  }
+
   .pc-area {
     display: none;
   }
@@ -303,9 +411,156 @@ footer {
     display: block;
   }
 
-  .container {
+  .contents {
     width: 100%;
   }
+
+  .mv-container {
+    position: relative;
+  }
+
+  /* burger menu */
+
+  #g-nav.panelactive{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    /* position:fixed; */
+    z-index: 999;
+    top: 0;
+    width:100%;
+    height: 100vh;
+  }
+
+  .circle-bg{
+    position: fixed;
+    z-index: 3;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    background: #999;
+    transform: scale(0);
+    right: -3.125rem;
+    top: -3.125rem;
+    transition: all .6s;
+  }
+
+  .circle-bg.circleactive{
+    transform: scale(50);
+  }
+
+  #g-nav-list{
+    display: none;/*はじめは表示なし*/
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #g-nav.panelactive #g-nav-list{
+      display: block;
+  }
+
+  #g-nav ul {
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 0;
+  }
+
+  #g-nav.panelactive ul {
+    opacity:1;
+  }
+
+  #g-nav.panelactive ul li {
+    animation-name:gnaviAnime;
+    animation-duration:1s;
+    animation-delay:.2s;/*0.2 秒遅らせて出現*/
+    animation-fill-mode:forwards;
+    opacity:0;
+  }
+
+  @keyframes gnaviAnime{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #g-nav li{
+    text-align: center; 
+    list-style: none;
+  }
+
+  #g-nav li a{
+    color: #333;
+    text-decoration: none;
+    padding:10px;
+    display: block;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    width: 18.75rem;
+  }
+
+/*========= ボタンのためのCSS ===============*/
+  .openbtn1{
+    position:fixed;
+    top:10px;
+    right: 10px;
+    z-index: 9999;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+  
+  .openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 0.875rem;
+    height: 0.188rem;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+  }
+
+  .openbtn1 span:nth-of-type(1) {
+    top: 0.938rem; 
+  }
+
+  .openbtn1 span:nth-of-type(2) {
+    top: 1.438rem;
+  }
+
+  .openbtn1 span:nth-of-type(3) {
+    top: 1.938rem;
+  }
+
+  .openbtn1.active span:nth-of-type(1) {
+    top: 1.125rem;
+    left: 1.125rem;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn1.active span:nth-of-type(3){
+    top: 1.875rem;
+    left: 1.125rem;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+/* nav ends */
 
   .mv {
     background-image: url(../img/frisbees.jpg);
@@ -314,20 +569,27 @@ footer {
   }
 
   .mv .mv-container {
-    width: 100% !important;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .mv .mv-container .main-box {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 10%;
   }
 
   .mv .mv-container .main-box .mv-text-box h1 {
     font-size: 1.5rem;
-  }
-
-  .mv .mv-container .main-box {
-    padding: 220px 20px 0;
+    color: #fff;
+    text-shadow: 2px 2px 3px #292929;
   }
 
   .mv .mv-container .main-box p {
     color: #fff;
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
 
   .upcoming-events h2 {
@@ -337,10 +599,7 @@ footer {
   .upcoming-events .event-boxes .one-box {
     margin-right: 2.5%;
     margin-left: 2.5%;
-  }
-
-  .past-events h2 {
-    text-align: center;
+    margin-bottom: 0;
   }
 
   .past-events .news-contents a .date {
@@ -351,15 +610,65 @@ footer {
     padding: 10px;
   }
 
-  .contact-us h2 {
-    text-align: center;
-  }
-
   .contact-contents {
-    justify-content: center;
+    margin: 0 1.25rem;
   }
 
   .contact-contents a .sns-icon {
     margin-right: 0 !important;
+  }
+
+  .text-box {
+    margin: 0 1.25rem;
+  }
+
+  .display-text-box {
+    margin: 0 1.25rem;
+  }
+
+  .js-tab-display-wrap {
+    margin: unset;
+  }
+
+  .js-tab-display {
+    display: block !important;
+  }
+
+  .js-tab-display .img-box img {
+    width: 90%;
+    height: 10.5rem;
+    object-fit: cover;
+  }
+
+  .display-2column {
+    margin: 0;
+  }
+
+  .display-item {
+    width: 40%;
+    margin: 1.25rem 0.625rem;
+  }
+
+  .display-item h3 {
+    font-size: 0.5rem;
+  }
+
+  .display-item .img-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .display-item .img-box img {
+    width: 9.375rem;
+    height: 4.688rem;
+  }
+
+  .text-box .img-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-container p {
+    font-size: 0.75rem;
   }
 }
