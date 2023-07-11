@@ -109,25 +109,25 @@ h2 {
 .mv {
   background-image: url(../img/frisbees.jpg);
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   position: relative;
   z-index: 1;
 }
 
-
-
 .mv .mv-container {
-  width: 1070px;
+  max-width: 1070px;
   margin: 0 auto;
 }
 
 .mv .mv-container .main-box {
-  padding-top: 300px;
+  /* padding-top: 300px; */
+  position: absolute;
+  top: 40%;
 }
 
-.mv .mv-container .main-box .mv-text-box {
-  margin-bottom: 50px;
+.mv-button-box {
+  margin-top: 50px;
 }
 
 .mv .mv-container .main-box .mv-button {
@@ -154,6 +154,7 @@ section {
   display: flex;
   justify-content: center;
 }
+
 .upcoming-events .event-boxes .one-box {
   border-radius: 10px;
   border: solid #1a458a 2px;
@@ -359,7 +360,7 @@ footer {
 
   .global-header-container {
     width: unset;
-    margin: 10px 15px;
+    margin: 0.625rem 0.938rem;
   }
 
   .upcoming-events h2 {
@@ -367,15 +368,15 @@ footer {
   }
 
   .text-box {
-    margin: 0 80px;
+    margin: 0 5rem;
   }
 
   .contact-contents {
-    margin: 0 80px;
+    margin: 0 5rem;
   }
 
   .mv .mv-container {
-    width: 100% !important;
+    width: 100vw;
     min-height: 100vh;
     position: relative;
   }
@@ -431,14 +432,14 @@ footer {
 
   .circle-bg{
     position: fixed;
-    z-index:3;
-    width: 100px;
-    height: 100px;
+    z-index: 3;
+    width: 6.25rem;
+    height: 6.25rem;
     border-radius: 50%;
     background: #999;
     transform: scale(0);
-    right:-50px;
-    top:-50px;
+    right: -3.125rem;
+    top: -3.125rem;
     transition: all .6s;
   }
 
@@ -504,7 +505,7 @@ footer {
     display: block;
     letter-spacing: 0.1em;
     font-weight: bold;
-    width: 300px;
+    width: 18.75rem;
   }
 
 /*========= ボタンのためのCSS ===============*/
@@ -514,36 +515,36 @@ footer {
     right: 10px;
     z-index: 9999;
     cursor: pointer;
-    width: 50px;
-    height:50px;
+    width: 3.125rem;
+    height: 3.125rem;
   }
   
   .openbtn1 span{
     display: inline-block;
     transition: all .4s;
     position: absolute;
-    left: 14px;
-    height: 3px;
+    left: 0.875rem;
+    height: 0.188rem;
     border-radius: 2px;
     background-color: #666;
     width: 45%;
   }
 
   .openbtn1 span:nth-of-type(1) {
-    top:15px; 
+    top: 0.938rem; 
   }
 
   .openbtn1 span:nth-of-type(2) {
-    top:23px;
+    top: 1.438rem;
   }
 
   .openbtn1 span:nth-of-type(3) {
-    top:31px;
+    top: 1.938rem;
   }
 
   .openbtn1.active span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
+    top: 1.125rem;
+    left: 1.125rem;
     transform: translateY(6px) rotate(-45deg);
     width: 30%;
   }
@@ -553,8 +554,8 @@ footer {
   }
 
   .openbtn1.active span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
+    top: 1.875rem;
+    left: 1.125rem;
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
   }
@@ -568,7 +569,7 @@ footer {
   }
 
   .mv .mv-container {
-    width: 100% !important;
+    width: 100vw;
     min-height: 100vh;
     position: relative;
   }
@@ -588,7 +589,7 @@ footer {
 
   .mv .mv-container .main-box p {
     color: #fff;
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
 
   .upcoming-events h2 {
@@ -610,7 +611,7 @@ footer {
   }
 
   .contact-contents {
-    margin: 0 20px;
+    margin: 0 1.25rem;
   }
 
   .contact-contents a .sns-icon {
@@ -618,11 +619,11 @@ footer {
   }
 
   .text-box {
-    margin: 0 20px;
+    margin: 0 1.25rem;
   }
 
   .display-text-box {
-    margin: 0 20px;
+    margin: 0 1.25rem;
   }
 
   .js-tab-display-wrap {
@@ -633,13 +634,19 @@ footer {
     display: block !important;
   }
 
+  .js-tab-display .img-box img {
+    width: 90%;
+    height: 10.5rem;
+    object-fit: cover;
+  }
+
   .display-2column {
     margin: 0;
   }
 
   .display-item {
     width: 40%;
-    margin: 20px 10px;
+    margin: 1.25rem 0.625rem;
   }
 
   .display-item h3 {
@@ -652,8 +659,8 @@ footer {
   }
 
   .display-item .img-box img {
-    width: 150px;
-    height: auto;
+    width: 9.375rem;
+    height: 4.688rem;
   }
 
   .text-box .img-box {
@@ -662,6 +669,6 @@ footer {
   }
 
   .footer-container p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
