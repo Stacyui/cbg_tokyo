@@ -15,6 +15,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  -webkit-appearance: none;
 }
 
 .sp-area {
@@ -130,14 +131,52 @@ h2 {
   margin-top: 50px;
 }
 
-.mv .mv-container .main-box .mv-button {
-  background-color: #ed691c;
-  padding: 15px 30px;
-  border-color: unset;
-  border-radius: 10px;
-  border-style: none;
-  color: #fff;
+.mv-button {
+  position: relative;
+  overflow: hidden;
   text-decoration: none;
+  display: inline-block;
+  padding: 15px 30px;
+  text-align: center;
+  outline: none;
+  transition: ease .2s;
+  background-color: #ed691c;
+  border-radius: 10px;
+}
+
+.mv-button:hover {
+  border: 1px solid #ed691c;
+}
+
+.mv-button span {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+}
+
+.mv-button:hover span{
+  color: #ed691c;
+}
+
+.bgskew::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  background:#fff;
+  width:120%;
+  height: 100%;
+  transform: skewX(25deg);
+}
+
+.bgskew:hover::before {
+  animation: skewanime .5s forwards;
+}
+
+@keyframes skewanime {
+  100% {
+    left:-10%;
+  }
 }
 
 .jump_point {
@@ -245,6 +284,10 @@ section {
   padding-right: 30%;
 }
 
+.text-box p {
+  line-height: 1.5;
+}
+
 /* what kinf of sport ~~~ */
 .sports-tab-wrap {
   display: flex;
@@ -292,6 +335,23 @@ section {
   object-fit: cover;
 }
 
+.display-text-box p {
+  line-height: 1.5;
+}
+
+.img-box-alt {
+  width: 300px;
+  height: 200px;
+  background-color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon {
+  color: #fff;
+}
+
 .andmore {
   width: 100%;
 }
@@ -303,7 +363,7 @@ section {
 }
 
 .display-item {
-  margin: 0 50px 0 50px;
+  margin: 0 50px;
 }
 
 .contact-contents {
@@ -356,6 +416,8 @@ footer {
   color: #fff;
 }
 
+
+/* for tablets */
 @media screen and (min-width: 769px) and (max-width: 1039px) {
 
   .global-header-container {
@@ -375,6 +437,22 @@ footer {
     margin: 0 5rem;
   }
 
+  .mv {
+    width: 100%;
+  }
+
+  .sports-tab-wrap {
+    margin: 0 5rem;
+  }
+
+  .sports-tab-wrap .sport-tab {
+    margin: 0 10px;
+  }
+
+  .sports-tab-wrap .sport-tab button {
+    width: 120px;
+  }
+
   .mv .mv-container {
     width: 100vw;
     min-height: 100vh;
@@ -385,15 +463,28 @@ footer {
     padding: 0;
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 0;
   }
 
   .mv .mv-container .main-box .mv-text-box h1 {
     color: #fff;
     text-shadow: 2px 2px 3px #292929;
   }
+
+  .upcoming-events .event-boxes {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .upcoming-events .event-boxes .one-box {
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 0;
+  }
+
 }
 
+/* for smart phones */
 @media screen and (max-width: 768px) {
   body {
     min-width: initial;
@@ -590,6 +681,19 @@ footer {
   .mv .mv-container .main-box p {
     color: #fff;
     padding-top: 2.5rem;
+  }
+
+  .mv-button {
+    padding: 15px 30px;
+    border-radius: 0.625rem;
+  }
+
+  .mv-button span {
+    font-size: 1rem;
+  }
+
+  .mv-button-box {
+    margin-top: 1.875rem;
   }
 
   .upcoming-events h2 {
