@@ -20,9 +20,9 @@
     <header class="sp-area">
         <div class="openbtn1"><span></span><span></span><span></span></div>
         <nav id="g-nav">
-            <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+            <div id="g-nav-list">
                 <ul>
-                    <li><a href="#up-coming">Upcoming Events</a></li>
+                    <!-- <li><a href="#up-coming">Upcoming Events</a></li> -->
                     <li><a href="#about-us">About Us</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
@@ -36,7 +36,7 @@
             <img src="assets/img/logo.jpg" alt="logo">
             <nav class="global-header-nav">
                 <ul class="links js-headLinks">
-                    <li><a href="#up-coming" class="link-item">Upcoming Events</a></li>
+                    <!-- <li><a href="#up-coming" class="link-item">Upcoming Events</a></li> -->
                     <li><a href="#about-us" class="link-item">About Us</a></li>
                     <li><a href="#contact" class="link-item">Contact Us</a></li>
                 </ul>
@@ -54,8 +54,8 @@
                         Open for beginners who want to try new sports.</p> -->
                     </div>
                     <div class="mv-button-box">
-                        <a href="https://meetu.ps/c/524nr/Vhjlp/a" target="_blank" class="mv-button">
-                            Join Our Meetup Group
+                        <a href="https://meetu.ps/c/524nr/Vhjlp/a" target="_blank" class="mv-button bgskew">
+                            <span>Join Our Meetup Group</span>
                         </a>
                     </div>
                     
@@ -64,7 +64,7 @@
         </div>
 
         <div class="contents">
-            <section class="upcoming-events">
+            <!-- <section class="upcoming-events">
                 <h2 class="jump_point" id="up-coming">Upcoming events</h2>
                 <div class="event-boxes">
 
@@ -108,7 +108,7 @@
                     </div>
 
                 </div>
-            </section>
+            </section> -->
 
             <!-- <section class="past-events">
                 <h2 class="jump_point" id="past">Past events</h2>
@@ -168,7 +168,7 @@
                     </div>
 
                     <div class="sport-tab">
-                        <button id="yoga" class='secList'>Yoga</button>
+                        <button id="spikeball" class='secList'>Spikeball</button>
                     </div>
 
                     <div class="sport-tab">
@@ -190,11 +190,12 @@
                     
                     <div class="ultimate-frisbee js-tab-display">
                         <div class="display-text-box">
-                            <h3>Ultimate Frisbee</h3>
-                            <p>Ultimate Frisbee, often referred to as just "Ultimate," is a fast-paced and exciting team sport played with a flying disc. It combines elements of football, soccer, and basketball, creating a unique and dynamic experience for players of all ages.</p>
-                            <!-- <p>In Ultimate Frisbee, teams strive to score points by passing the disc to teammates and completing passes in the opponent's end zone. What sets this sport apart is the emphasis on fair play, sportsmanship, and self-refereeing. Players make their own calls and resolve disputes through respectful communication, fostering a strong sense of integrity and camaraderie.</p> -->
+                            <h3>Ultimate Frisbee</h3> 
+                            <p>Ultimate Frisbee, often referred to as just "Ultimate," is a fast-paced and a non-contact team sport played with a flying disc.<br>
+                                Each team defends one end zone. Points are scored when a player successfully passes the disc to a teammate in the opposite end zone.
+                            </p>
                             <div class="img-box">
-                                <img src="assets/img/volleyball_01.jpg" alt="Volleyball">
+                                <img src="assets/img/frisbees_02.jpg" alt="Ultimate Frisbee">
                             </div>
                         </div>
                     </div>
@@ -203,32 +204,40 @@
                         <div class="display-text-box">
                             <h3>Mölkky</h3>
                             <p>Mölkky is a Finnish throwing game. The players knock over wooden pins, known as "skittles," by throwing a wooden stick, called a "mölkky," from a designated throwing line.<br>
-                                If you knock down one skittle, you score the number of points marked on that skittle.
+                                If a player knocks down one skittle, the player scores the number of points marked on that skittle.
                             </p>
                             <div class="img-box">
-                                <img src="assets/img/softball_01.png" alt="Softball">
+                                <img src="assets/img/molkky.jpg" alt="Mölkky">
                             </div>
+                            <!-- <div class="img-box-alt">
+                                <div class="coming-soon">Coming soon</div>
+                            </div> -->
                         </div>
                     </div>
 
                     <div class="touch-rugby js-tab-display">
                         <div class="display-text-box">
                             <h3>Touch Rugby</h3>
-                            <p>Touch Rugby is a fast-paced, non-contact sport that combines the agility of rugby with strategic gameplay. Played by both men and women, this thrilling sport emphasizes teamwork, skill, and quick thinking.</p>
-                            <p>In Touch Rugby, the objective is to score points by touching the opposition's player without any physical contact. It's a fantastic way to enjoy the exhilaration of rugby without the tackles.</p>
+                            <p>
+                                Touch Rugby is a fast-paced and a limited-contact sport.<br>
+                                Like all forms of rugby, the aim is to score more tries than the opposition. A legal touch is on any part of the body, clothing and ball.<br>
+                                It is played by both men and women, this thrilling sport requires teamwork, skill, and quick thinking.
+                            </p>
                             <div class="img-box">
-                                <img src="assets/img/handball_01.jpg" alt="Handball">
+                                <img src="assets/img/touch_rugby.jpg" alt="Touch Rugby">
                             </div>
                         </div>
                     </div>
 
-                    <div class="yoga js-tab-display">
+                    <div class="spikeball js-tab-display">
                         <div class="display-text-box">
-                            <h3>Yoga</h3>
-                            <p><sup>*</sup>Japanese class<br>Yoga is an ancient discipline that encompasses physical, mental, and spiritual aspects. It combines physical postures, breathing exercises, meditation, and relaxation techniques to promote overall well-being and inner balance.</p>
-                            <p>In yoga, practitioners cultivate strength, flexibility, and mindfulness through a series of postures known as "asanas." These postures are designed to improve body awareness, enhance physical fitness, and promote a sense of calm and clarity.</p>
+                            <h3>Spikeball</h3>
+                            <p>Spikeball, also commonly known as Roundnet, is played between two teams.<br>
+                                The game starts with a serve from one team to another. Each team has up to three hits to return the ball to the net.<br>
+                                Points are scored when the ball hits the rim, the ground, bounces more than once on the net, etc.
+                            </p>
                             <div class="img-box">
-                                <img src="assets/img/handball_01.jpg" alt="Handball">
+                                <img src="assets/img/spikeball.jpg" alt="Spikeball">
                             </div>
                         </div>
                     </div>
@@ -258,7 +267,21 @@
                             <div class="display-item">
                                 <h3>Basketball</h3>
                                 <div class="img-box">
-                                    <img src="https://placehold.jp/300x150.png" alt="Basketball">
+                                    <img src="assets/img/basketball_02.jpg" alt="Basketball">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-2column">
+                            <div class="display-item">
+                                <h3>Yoga</h3>
+                                <div class="img-box">
+                                    <img src="assets/img/yoga.jpg" alt="Yoga">
+                                </div>
+                            </div>
+                            <div class="display-item">
+                                <h3>Futsal</h3>
+                                <div class="img-box">
+                                    <img src="assets/img/indoor_soccer.jpg" alt="Futsal">
                                 </div>
                             </div>
                         </div>
