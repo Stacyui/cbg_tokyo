@@ -19,7 +19,7 @@ body {
 }
 
 .sp-area {
-  display: none;
+  display: none !important;
 }
 
 .pc-area {
