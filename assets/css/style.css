@@ -108,7 +108,7 @@ h2 {
 }
 
 .mv {
-  background-image: url(../img/frisbees.jpg);
+  background-image: url(../img/frisbee_01.jpg);
   background-size: cover;
   width: 100vw;
   min-height: 100vh;
@@ -329,6 +329,10 @@ section {
   object-fit: cover;
 }
 
+.text-box-flex .img-box {
+  margin-right: 30px;
+}
+
 .display-item .img-box img {
   width: 300px;
   height: 150px;
@@ -337,6 +341,11 @@ section {
 
 .display-text-box p {
   line-height: 1.5;
+  margin: 0;
+}
+
+.text-box-flex {
+  display: flex;
 }
 
 .img-box-alt {
@@ -346,10 +355,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.coming-soon {
-  color: #fff;
 }
 
 .andmore {
@@ -491,11 +496,11 @@ footer {
   }
 
   .pc-area {
-    display: none;
+    display: none !important;
   }
 
   .sp-area {
-    display: block;
+    display: block !important;
   }
 
   .br-sp {
@@ -654,8 +659,9 @@ footer {
 /* nav ends */
 
   .mv {
-    background-image: url(../img/frisbees.jpg);
+    background-image: url(../img/frisbee_01.jpg);
     background-size: cover;
+    background-position: center;
     width: 100%;
   }
 
@@ -728,6 +734,10 @@ footer {
 
   .display-text-box {
     margin: 0 1.25rem;
+  }
+
+  .display-text-box p {
+    padding-top: 1.875rem;
   }
 
   .js-tab-display-wrap {
