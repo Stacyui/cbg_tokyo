@@ -122,7 +122,6 @@ h2 {
 }
 
 .mv .mv-container .main-box {
-  /* padding-top: 300px; */
   position: absolute;
   top: 40%;
 }
@@ -675,7 +674,8 @@ footer {
     padding: 0;
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 0;
+    margin: 0 1.25rem;
   }
 
   .mv .mv-container .main-box .mv-text-box h1 {
@@ -737,7 +737,7 @@ footer {
   }
 
   .display-text-box p {
-    padding-top: 1.875rem;
+    padding-top: 1rem;
   }
 
   .js-tab-display-wrap {
