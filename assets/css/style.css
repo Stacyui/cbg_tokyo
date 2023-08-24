@@ -735,6 +735,10 @@ footer {
     margin: 0 1.25rem;
   }
 
+  .display-text-box h3 {
+    margin-top: 0;
+  }
+
   .display-text-box p {
     padding-top: 1rem;
   }
