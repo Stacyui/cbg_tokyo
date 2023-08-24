@@ -108,7 +108,7 @@ h2 {
 }
 
 .mv {
-  background-image: url(../img/frisbee_01.jpg);
+  background-image: url(../img/mv_frisbee.jpg);
   background-size: cover;
   width: 100vw;
   min-height: 100vh;
@@ -649,7 +649,7 @@ footer {
 /* burger menu - end - */
 
   .mv {
-    background-image: url(../img/frisbee_01.jpg);
+    background-image: url(../img/mv_frisbee.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -767,7 +767,7 @@ footer {
   }
 
   .display-item h3 {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 
   .display-item .display-text-box-img {
