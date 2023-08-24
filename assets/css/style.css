@@ -54,7 +54,7 @@ header {
   font-size: 14px;
 }
 
-.bold {
+.text-bold {
   font-weight: bold;
 }
 
@@ -121,16 +121,16 @@ h2 {
   margin: 0 auto;
 }
 
-.mv .mv-container .main-box {
+.mv .mv-container .mv-box {
   position: absolute;
   top: 40%;
 }
 
-.mv-button-box {
+.mv-button {
   margin-top: 50px;
 }
 
-.mv-button {
+.mv-button__link {
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -143,17 +143,17 @@ h2 {
   border-radius: 10px;
 }
 
-.mv-button:hover {
+.mv-button__link:hover {
   border: 1px solid #ed691c;
 }
 
-.mv-button span {
+.mv-button__link span {
   position: relative;
   z-index: 3;
   color: #fff;
 }
 
-.mv-button:hover span{
+.mv-button__link:hover span{
   color: #ed691c;
 }
 
@@ -216,19 +216,19 @@ section {
   height: 150px;
   object-fit: cover;
 }
-.upcoming-events .event-boxes .one-box a .box-text-box p {
+.upcoming-events .event-boxes .one-box a .box-text p {
   color: #1a458a;
 }
-.upcoming-events .event-boxes .one-box a .box-text-box .text-small {
+.upcoming-events .event-boxes .one-box a .box-text .text-small {
   margin-top: 15px;
   margin-bottom: 0;
   padding-left: 15px;
 }
-.upcoming-events .event-boxes .one-box a .box-text-box .bold {
+.upcoming-events .event-boxes .one-box a .box-text .text-bold {
   margin-top: 3px;
   padding-left: 15px;
 }
-.upcoming-events .event-boxes .one-box a .box-text-box .box-text-box-fix {
+.upcoming-events .event-boxes .one-box a .box-text .text-fix {
   padding-left: 10px;
 }
 
@@ -322,17 +322,17 @@ section {
   display: flex;
 }
 
-.js-tab-display .img-box img {
+.js-tab-display .display-text-box-img img {
   width: 300px;
   height: 200px;
   object-fit: cover;
 }
 
-.text-box-flex .img-box {
+.display-text-box-flex .display-text-box-img {
   margin-right: 30px;
 }
 
-.display-item .img-box img {
+.display-item .display-text-box-img img {
   width: 300px;
   height: 150px;
   object-fit: cover;
@@ -343,7 +343,7 @@ section {
   margin: 0;
 }
 
-.text-box-flex {
+.display-text-box-flex {
   display: flex;
 }
 
@@ -377,11 +377,11 @@ section {
   text-decoration: none;
   margin-right: 30px;
 }
-.contact-contents a .sns-icon {
+.contact-contents a .social-media-icon {
   width: 50px;
   height: 50px;
 }
-.contact-contents a .sns-icon img {
+.contact-contents a .social-media-icon img {
   width: 50px;
   height: 50px;
 }
@@ -433,10 +433,6 @@ footer {
     text-align: center;
   }
 
-  .text-box {
-    margin: 0 5rem;
-  }
-
   .contact-contents {
     margin: 0 5rem;
   }
@@ -463,14 +459,14 @@ footer {
     position: relative;
   }
 
-  .mv .mv-container .main-box {
+  .mv .mv-container .mv-box {
     padding: 0;
     position: absolute;
     top: 50%;
     left: 0;
   }
 
-  .mv .mv-container .main-box .mv-text-box h1 {
+  .mv .mv-container .mv-box .mv-text h1 {
     color: #fff;
     text-shadow: 2px 2px 3px #292929;
   }
@@ -514,11 +510,8 @@ footer {
     position: relative;
   }
 
-  /* burger menu */
-
+  /* burger menu - start - */
   #g-nav.panelactive{
-    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-    /* position:fixed; */
     z-index: 999;
     top: 0;
     width:100%;
@@ -543,8 +536,7 @@ footer {
   }
 
   #g-nav-list{
-    display: none;/*はじめは表示なし*/
-    /*ナビの数が増えた場合縦スクロール*/
+    display: none;
     position: fixed;
     z-index: 999; 
     width: 100%;
@@ -574,7 +566,7 @@ footer {
   #g-nav.panelactive ul li {
     animation-name:gnaviAnime;
     animation-duration:1s;
-    animation-delay:.2s;/*0.2 秒遅らせて出現*/
+    animation-delay:.2s;
     animation-fill-mode:forwards;
     opacity:0;
   }
@@ -603,7 +595,6 @@ footer {
     width: 18.75rem;
   }
 
-/*========= ボタンのためのCSS ===============*/
   .openbtn1{
     position:fixed;
     top:10px;
@@ -655,7 +646,7 @@ footer {
     width: 30%;
   }
 
-/* nav ends */
+/* burger menu - end - */
 
   .mv {
     background-image: url(../img/frisbee_01.jpg);
@@ -670,7 +661,7 @@ footer {
     position: relative;
   }
 
-  .mv .mv-container .main-box {
+  .mv .mv-container .mv-box {
     padding: 0;
     position: absolute;
     top: 50%;
@@ -678,27 +669,27 @@ footer {
     margin: 0 1.25rem;
   }
 
-  .mv .mv-container .main-box .mv-text-box h1 {
+  .mv .mv-container .mv-box .mv-text h1 {
     font-size: 1.5rem;
     color: #fff;
     text-shadow: 2px 2px 3px #292929;
   }
 
-  .mv .mv-container .main-box p {
+  .mv .mv-container .mv-box p {
     color: #fff;
     padding-top: 2.5rem;
   }
 
-  .mv-button {
+  .mv-button__link {
     padding: 15px 30px;
     border-radius: 0.625rem;
   }
 
-  .mv-button span {
+  .mv-button__link span {
     font-size: 1rem;
   }
 
-  .mv-button-box {
+  .mv-button {
     margin-top: 1.875rem;
   }
 
@@ -720,15 +711,23 @@ footer {
     padding: 10px;
   }
 
+  .about-us {
+    margin-top: 3.125rem;
+  }
+
   .contact-contents {
     margin: 0 1.25rem;
   }
 
-  .contact-contents a .sns-icon {
+  .contact-contents a .social-media-icon {
     margin-right: 0 !important;
   }
 
   .text-box {
+    margin: 0 1.25rem;
+  }
+
+  .text-title {
     margin: 0 1.25rem;
   }
 
@@ -748,7 +747,7 @@ footer {
     display: block !important;
   }
 
-  .js-tab-display .img-box img {
+  .js-tab-display .display-text-box-img img {
     width: 90%;
     height: 10.5rem;
     object-fit: cover;
@@ -767,17 +766,17 @@ footer {
     font-size: 0.5rem;
   }
 
-  .display-item .img-box {
+  .display-item .display-text-box-img {
     display: flex;
     justify-content: center;
   }
 
-  .display-item .img-box img {
+  .display-item .display-text-box-img img {
     width: 9.375rem;
     height: 4.688rem;
   }
 
-  .text-box .img-box {
+  .text-box .display-text-box-img {
     display: flex;
     justify-content: center;
   }
