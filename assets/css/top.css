@@ -18,95 +18,6 @@ body {
   -webkit-appearance: none;
 }
 
-.sp-area {
-  display: none !important;
-}
-
-.pc-area {
-  display: block;
-}
-
-.br-sp {
-  display: none;
-}
-
-.links li a:hover::after {
-  transform: scale(1, 1);
-}
-
-.mt50 {
-  margin-top: 50px;
-}
-
-body {
-  margin: 0;
-  min-width: 1080px;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  z-index: 1000;
-}
-
-.text-small {
-  font-size: 14px;
-}
-
-.text-bold {
-  font-weight: bold;
-}
-
-h2 {
-  color: #1a458a;
-}
-
-.global-header-container {
-  width: 1070px;
-  margin: 10px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 50px;
-}
-.global-header-container img {
-  height: 50px;
-  width: auto;
-}
-.global-header-container a img {
-  height: 50px;
-  width: auto;
-}
-.global-header-container .global-header-nav {
-  height: 50px;
-}
-.global-header-container .global-header-nav .links {
-  display: flex;
-  height: 50px;
-}
-.global-header-container .global-header-nav .links li {
-  list-style: none;
-  margin-left: 40px;
-  font-size: 1em;
-  position: relative;
-  padding: 0em 0.3em 0.3em 1.3em;
-}
-.global-header-container .global-header-nav .links li a {
-  text-decoration: none;
-  color: #1a458a;
-  position: relative;
-}
-
-.links {
-  color: #1a458a;
-}
-
-.contents {
-  width: 1070px;
-  margin: 0 auto;
-}
-
 .mv {
   background-image: url(../img/mv_frisbee.jpg);
   background-size: cover;
@@ -184,10 +95,6 @@ h2 {
   margin-top: -120px;
 }
 
-section {
-  margin-top: 70px;
-}
-
 .upcoming-events .event-boxes {
   display: flex;
   justify-content: center;
@@ -199,35 +106,43 @@ section {
   padding: 7px;
   width: 260px;
 }
+
 .upcoming-events .event-boxes .one-box a {
   text-decoration: none;
   color: #1a458a;
 }
+
 .upcoming-events .event-boxes .one-box a :visited {
   color: #1a458a;
 }
+
 .upcoming-events .event-boxes .one-box a .box-image {
   display: flex;
   justify-content: center;
 }
+
 .upcoming-events .event-boxes .one-box a .box-image img {
   border-radius: 10px;
   width: 260px;
   height: 150px;
   object-fit: cover;
 }
+
 .upcoming-events .event-boxes .one-box a .box-text p {
   color: #1a458a;
 }
+
 .upcoming-events .event-boxes .one-box a .box-text .text-small {
   margin-top: 15px;
   margin-bottom: 0;
   padding-left: 15px;
 }
+
 .upcoming-events .event-boxes .one-box a .box-text .text-bold {
   margin-top: 3px;
   padding-left: 15px;
 }
+
 .upcoming-events .event-boxes .one-box a .box-text .text-fix {
   padding-left: 10px;
 }
@@ -246,8 +161,8 @@ section {
 }
 
 .box-image {
-  overflow: hidden; /*拡大時にはみ出た部分を隠す*/
-  max-width: 260px; /*画像の幅*/
+  overflow: hidden;
+  max-width: 260px;
   max-height: 460px;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -261,24 +176,25 @@ section {
 }
 
 .box-image img:hover {
-  transform: scale(1.2); /*画像の拡大率指定*/
+  transform: scale(1.2);
 }
 
 .past-events .news-contents {
   width: 90%;
   margin: 0 auto;
 }
+
 .past-events .news-contents a {
   text-decoration: none;
   color: #333;
   padding: 10px 20px;
   outline: none;
-  /*アニメーションの指定*/
   transition: all 0.3s;
   display: flex;
   border-bottom: 1px solid #dcdcdc;
   padding-left: 10px;
 }
+
 .past-events .news-contents a .date {
   padding-right: 30%;
 }
@@ -291,10 +207,7 @@ section {
 .sports-tab-wrap {
   display: flex;
   justify-content: center;
-}
-
-.sports-tab-wrap .sport-tab {
-  margin: 0 15px;
+  gap: 15px;
 }
 
 .sports-tab-wrap .sport-tab button {
@@ -386,16 +299,6 @@ section {
   height: 50px;
 }
 
-.change-color {
-  background-color: #1a458a;
-  transition: 0.3s;
-  height: auto;
-}
-
-.text-color {
-  color: #fff !important;
-}
-
 .global-header-nav {
   margin-left: auto;
 }
@@ -405,29 +308,8 @@ section {
   margin-bottom: 0;
 }
 
-footer {
-  background-color: #1a458a;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.footer-container p {
-  color: #fff;
-}
-
-
 /* for tablets */
 @media screen and (min-width: 769px) and (max-width: 1039px) {
-
-  .global-header-container {
-    width: unset;
-    margin: 0.625rem 0.938rem;
-  }
 
   .upcoming-events h2 {
     text-align: center;
@@ -486,167 +368,9 @@ footer {
 
 /* for smart phones */
 @media screen and (max-width: 768px) {
-  body {
-    min-width: initial;
-  }
-
-  .pc-area {
-    display: none !important;
-  }
-
-  .sp-area {
-    display: block !important;
-  }
-
-  .br-sp {
-    display: block;
-  }
-
-  .contents {
-    width: 100%;
-  }
-
   .mv-container {
     position: relative;
   }
-
-  /* burger menu - start - */
-  #g-nav.panelactive{
-    z-index: 999;
-    top: 0;
-    width:100%;
-    height: 100vh;
-  }
-
-  .circle-bg{
-    position: fixed;
-    z-index: 3;
-    width: 6.25rem;
-    height: 6.25rem;
-    border-radius: 50%;
-    background: #999;
-    transform: scale(0);
-    right: -3.125rem;
-    top: -3.125rem;
-    transition: all .6s;
-  }
-
-  .circle-bg.circleactive{
-    transform: scale(50);
-  }
-
-  #g-nav-list{
-    display: none;
-    position: fixed;
-    z-index: 999; 
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  #g-nav.panelactive #g-nav-list{
-      display: block;
-  }
-
-  #g-nav ul {
-    opacity: 0;
-    position: absolute;
-    z-index: 999;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 0;
-  }
-
-  #g-nav.panelactive ul {
-    opacity:1;
-  }
-
-  #g-nav.panelactive ul li {
-    animation-name:gnaviAnime;
-    animation-duration:1s;
-    animation-delay:.2s;
-    animation-fill-mode:forwards;
-    opacity:0;
-  }
-
-  @keyframes gnaviAnime{
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  #g-nav li{
-    text-align: center; 
-    list-style: none;
-  }
-
-  #g-nav li a{
-    color: #333;
-    text-decoration: none;
-    padding:10px;
-    display: block;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-    width: 18.75rem;
-  }
-
-  .openbtn1{
-    position:fixed;
-    top:10px;
-    right: 10px;
-    z-index: 9999;
-    cursor: pointer;
-    width: 3.125rem;
-    height: 3.125rem;
-  }
-  
-  .openbtn1 span{
-    display: inline-block;
-    transition: all .4s;
-    position: absolute;
-    left: 0.875rem;
-    height: 0.188rem;
-    border-radius: 2px;
-    background-color: #666;
-    width: 45%;
-  }
-
-  .openbtn1 span:nth-of-type(1) {
-    top: 0.938rem; 
-  }
-
-  .openbtn1 span:nth-of-type(2) {
-    top: 1.438rem;
-  }
-
-  .openbtn1 span:nth-of-type(3) {
-    top: 1.938rem;
-  }
-
-  .openbtn1.active span:nth-of-type(1) {
-    top: 1.125rem;
-    left: 1.125rem;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
-  }
-
-  .openbtn1.active span:nth-of-type(2) {
-    opacity: 0;
-  }
-
-  .openbtn1.active span:nth-of-type(3){
-    top: 1.875rem;
-    left: 1.125rem;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
-  }
-
-/* burger menu - end - */
 
   .mv {
     background-image: url(../img/mv_frisbee.jpg);
@@ -722,15 +446,7 @@ footer {
   .contact-contents a .social-media-icon {
     margin-right: 0 !important;
   }
-
-  .text-box {
-    margin: 0 1.25rem;
-  }
-
-  .text-title {
-    margin: 0 1.25rem;
-  }
-
+  
   .display-text-box {
     margin: 0 1.25rem;
   }
@@ -783,9 +499,5 @@ footer {
   .text-box .display-text-box-img {
     display: flex;
     justify-content: center;
-  }
-
-  .footer-container p {
-    font-size: 0.75rem;
   }
 }

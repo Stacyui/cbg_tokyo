@@ -1,0 +1,237 @@
+@charset "UTF-8";
+.links li a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #1a458a;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.links li a:hover::after {
+  transform: scale(1, 1);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+}
+
+.change-color {
+  background-color: #1a458a;
+  transition: 0.3s;
+  height: auto;
+}
+
+.text-color {
+  color: #fff !important;
+}
+
+.global-header-container {
+  width: 1070px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 50px;
+}
+.global-header-container img {
+  height: 50px;
+  width: auto;
+}
+.global-header-container a img {
+  height: 50px;
+  width: auto;
+}
+.global-header-container .global-header-nav {
+  height: 50px;
+}
+.global-header-container .global-header-nav .links {
+  display: flex;
+  height: 50px;
+}
+.global-header-container .global-header-nav .links li {
+  list-style: none;
+  margin-left: 40px;
+  font-size: 1em;
+  position: relative;
+  padding: 0em 0.3em 0.3em 1.3em;
+}
+.global-header-container .global-header-nav .links li a {
+  text-decoration: none;
+  color: #1a458a;
+  position: relative;
+}
+
+.links {
+  color: #1a458a;
+}
+
+@media screen and (max-width: 768px) {
+  /* .sp-hide {
+    display: none;
+  } */
+
+  .sp-header {
+    /* background-color: #1a458a; */
+    position: fixed;
+    top: 0;
+    height: 60px;
+  }
+
+  .sp-header-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+
+  .sp-header-logo img {
+    width: auto;
+    height: 40px;
+  }
+
+  #g-nav.panelactive{
+    z-index: 999;
+    top: 0;
+    width:100%;
+    height: 100vh;
+  }
+
+  .circle-bg{
+    position: fixed;
+    z-index: 3;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    background: #999;
+    transform: scale(0);
+    right: -3.125rem;
+    top: -3.125rem;
+    transition: all .6s;
+  }
+
+  .circle-bg.circleactive{
+    transform: scale(50);
+  }
+
+  #g-nav-list{
+    display: none;
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #g-nav.panelactive #g-nav-list{
+      display: block;
+  }
+
+  #g-nav ul {
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 0;
+  }
+
+  #g-nav.panelactive ul {
+    opacity:1;
+  }
+
+  #g-nav.panelactive ul li {
+    animation-name:gnaviAnime;
+    animation-duration:1s;
+    animation-delay:.2s;
+    animation-fill-mode:forwards;
+    opacity:0;
+  }
+
+  @keyframes gnaviAnime{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #g-nav li{
+    text-align: center; 
+    list-style: none;
+  }
+
+  #g-nav li a{
+    color: #333;
+    text-decoration: none;
+    padding:10px;
+    display: block;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    width: 18.75rem;
+  }
+
+  .openbtn1{
+    position:fixed;
+    /* top:10px; */
+    top: 5px;
+    right: 10px;
+    z-index: 9999;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+  
+  .openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 0.875rem;
+    height: 0.188rem;
+    border-radius: 2px;
+    background-color: #666;
+    /* background-color: #fff; */
+    width: 45%;
+  }
+
+  .openbtn1 span:nth-of-type(1) {
+    top: 0.938rem; 
+  }
+
+  .openbtn1 span:nth-of-type(2) {
+    top: 1.438rem;
+  }
+
+  .openbtn1 span:nth-of-type(3) {
+    top: 1.938rem;
+  }
+
+  .openbtn1.active span:nth-of-type(1) {
+    top: 1.125rem;
+    left: 1.125rem;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn1.active span:nth-of-type(3){
+    top: 1.875rem;
+    left: 1.125rem;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+}

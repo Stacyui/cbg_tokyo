@@ -1,0 +1,50 @@
+/* general */
+.sp-area {
+    display: none !important;
+}
+
+.pc-area {
+    display: block;
+}
+
+.br-sp {
+    display: none;
+}
+
+/* margin */
+.mt50 {
+    margin-top: 50px;
+}
+
+/* text */
+.text-small {
+    font-size: 14px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 35px;
+    color: #232323;
+}
+
+h2 {
+    color: #1a458a;
+    font-size: 27px;
+}
+
+@media screen and (max-width: 768px) {
+    .pc-area {
+        display: none !important;
+    }
+
+    .sp-area {
+        display: block !important;
+    }
+
+    .br-sp {
+        display: block;
+    }
+}

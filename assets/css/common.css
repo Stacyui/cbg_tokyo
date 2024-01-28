@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    min-width: 1080px;
+}
+
+.contents {
+    width: 1070px;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 70px;
+}
+
+/* for tablets */
+@media screen and (min-width: 769px) and (max-width: 1039px) {
+    .global-header-container {
+        width: unset;
+        margin: 0.625rem 0.938rem;
+    }
+}
+
+/* for smart phones */
+@media screen and (max-width: 768px) {
+    body {
+        min-width: initial;
+    }
+    
+    .contents {
+        width: 100%;
+    }
+
+    .text-box {
+        margin: 0 1.25rem;
+    }
+
+    .text-title {
+        margin: 0 1.25rem;
+    }
+}

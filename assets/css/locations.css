@@ -1,0 +1,47 @@
+.gym-locations {
+    padding-top: 100px;
+}
+
+.gym-locations-list {
+    padding: 20px;
+}
+
+.gym-locations-list li {
+    /* list-style-type: none; */
+    padding: 20px 0;
+}
+
+.gym-locations-list li a {
+    text-decoration: none;
+    color: #232323;
+    border-bottom: 1px solid #1a458a;
+    padding: 20px 0;
+}
+
+.gym-locations-list li a:hover {
+    color: #7d7d7d;
+}
+
+@media screen and (max-width: 768px) {
+    .gym-locations {
+        margin-top: 90px;
+        padding-top: unset;
+    }
+
+    .gym-locations-list {
+        padding: 0 20px;
+    }
+
+    .gym-locations-list li {
+        border-bottom: 1px solid #1a458a;
+        padding: 15px 0;
+    }
+
+    .gym-locations-list li a {
+        border-bottom: none;
+    }
+
+    .gym-locations-list {
+        margin: 0 1.25rem;
+    }
+}

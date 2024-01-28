@@ -1,3 +1,4 @@
+// -- PC scroll header -- //
 $(function () {
     $(window).on('scroll', function () {
         if ($('.mv').height()  < $(this).scrollTop()) {
@@ -14,18 +15,8 @@ $(function () {
     });
 });
 
-// -- burger menu -- //
-$(".openbtn1").click(function () {//ボタンがクリックされたら
-    $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-    $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
-    $(".circle-bg").toggleClass('circleactive');//丸背景にcircleactiveクラスを付与
-});
-  
-$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
-    $(".openbtn1").removeClass('active');//ボタンの activeクラスを除去し
-    $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
-    $(".circle-bg").removeClass('circleactive');//丸背景のcircleactiveクラスを除去
-});
+// -- SP scroll header -- //
+
 
 // -- Upcoming events slider -- //
 $(function(){
@@ -75,7 +66,7 @@ $(function(){
     });
 });
 
-// -- 'What kind of sports do we play' -- //
+// -- 'What kind of sports do we play' area -- //
 $(function(){
     $('.js-tab-display').hide();
     $('.display-first').show();
@@ -91,3 +82,40 @@ $(function(){
         $(this).addClass('is-current');
     });
 });
+
+// -- include file --//
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      return;
+    }
+  }
+
+  // -- header burger menu -- //
+    $(".openbtn1").click(function () {
+        $(this).toggleClass('active');
+        $("#g-nav").toggleClass('panelactive');
+        $(".circle-bg").toggleClass('circleactive');
+    });
+
+    $("#g-nav a").click(function () {
+        $(".openbtn1").removeClass('active');
+        $("#g-nav").removeClass('panelactive');
+        $(".circle-bg").removeClass('circleactive');
+    });
+}
