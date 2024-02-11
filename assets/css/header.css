@@ -75,9 +75,9 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-  /* .sp-hide {
+  .sp-hide {
     display: none;
-  } */
+  }
 
   .sp-header {
     /* background-color: #1a458a; */

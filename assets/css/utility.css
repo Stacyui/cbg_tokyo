@@ -12,19 +12,15 @@
 }
 
 /* margin */
+.mt0--pc {
+    margin-top: 0;
+}
+
 .mt50 {
     margin-top: 50px;
 }
 
 /* text */
-.text-small {
-    font-size: 14px;
-}
-
-.text-bold {
-    font-weight: bold;
-}
-
 h1 {
     font-size: 35px;
     color: #232323;
@@ -34,6 +30,21 @@ h2 {
     color: #1a458a;
     font-size: 27px;
 }
+
+.text-small {
+    font-size: 14px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* align */
+
 
 @media screen and (max-width: 768px) {
     .pc-area {
@@ -46,5 +57,9 @@ h2 {
 
     .br-sp {
         display: block;
+    }
+
+    .mt0--pc {
+        margin-top: 90px;
     }
 }
