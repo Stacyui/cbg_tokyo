@@ -323,6 +323,7 @@
 .display-text-box p {
   line-height: 1.5;
   margin: 0;
+  font-weight: 400;
 }
 
 .display-text-box-flex {

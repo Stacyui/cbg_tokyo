@@ -45,6 +45,7 @@ section {
     }
 
     .gym-locations-list {
+        margin: 1rem 1.25rem;
         padding: 0 20px;
     }
 
@@ -57,7 +58,7 @@ section {
         border-bottom: none;
     }
 
-    .gym-locations-list {
-        margin: 0 1.25rem;
+    .gym-locations__directions {
+        margin-top: 30px;
     }
 }
