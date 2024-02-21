@@ -16,7 +16,48 @@ $(function () {
 });
 
 // -- SP scroll header -- //
+const header = document.querySelector('.sp-js-scrollHeader');
+let prevY = window.scrollY; // 前回のスクロール位置を初期化
 
+window.addEventListener('scroll', () => {
+  const currentY = window.scrollY; // 現在のスクロール位置を取得
+  if (currentY < prevY) { // 上にスクロールしている場合
+        $('.sp-js-scrollHeader').removeClass('sp-scroll-hidden'); // sp-scroll-hiddenクラスを削除して表示する
+  } else { // 下にスクロールしている場合
+  if (currentY > 0) { //Safariなどのバウンススクロール対策
+        $('.sp-js-scrollHeader').addClass('sp-scroll-hidden'); // sp-scroll-hiddenクラスを追加して非表示にする
+    }
+  }
+  prevY = currentY; // 前回のスクロール位置を更新
+});
+
+$(function () {
+    $(window).on('scroll', function () {
+        if ($('.mv').height()  < $(this).scrollTop()) {
+            $('.sp-js-scrollHeader').addClass('sp-scroll-change-color');
+        } else {
+            $('.sp-js-scrollHeader').removeClass('sp-scroll-change-color');
+        }
+
+        if ($('.mv').height()  < $(this).scrollTop()) {
+            $('.openbtn1-span').addClass('span-change-color');
+        } else {
+            $('.openbtn1-span').removeClass('span-change-color');
+        }
+    });
+});
+
+// -- Title text one by one --//
+const CLASSNAME = "-visible";
+const TIMEOUT = 1500;
+const $target = $(".mv-text-title");
+
+setInterval(() => {
+  $target.addClass(CLASSNAME);
+  setTimeout(() => {
+    $target.removeClass(CLASSNAME);
+  }, TIMEOUT);
+}, TIMEOUT * 2);
 
 // -- Upcoming events slider -- //
 $(function(){

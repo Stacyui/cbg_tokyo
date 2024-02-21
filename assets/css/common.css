@@ -1,10 +1,12 @@
 body {
     margin: 0;
     min-width: 1080px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-appearance: none;
 }
 
 .contents {
-    width: 1070px;
+    width: 1080px;
     margin: 0 auto;
 }
 
@@ -12,6 +14,7 @@ section {
     margin-top: 70px;
 }
 
+/* image */
 .image-box {
     max-width: 550px;
     margin: 0 auto;
@@ -19,11 +22,70 @@ section {
 
 .image-box figure {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-box figure img {
     max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.image-box figure figcaption {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* anchor */
+.anchor_link {
+    margin: 0 auto;
+}
+
+.anchor_link p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.anchor_link ul {
+    display: flex;
+    padding-left: 0;
+    gap: 150px;
+}
+
+.anchor_link ul li {
+    list-style: none;
+    text-align: center;
+    width: 50%;
+}
+
+.anchor_link ul li:first-child {
+    display: flex;
+    justify-content: end;
+}
+
+.anchor_link ul li:nth-child(2) {
+    display: flex;
+    justify-content: start;
+}
+
+.anchor_link ul li:first-child .anchor_link p{
+    color: #1a458a;
+}
+
+.anchor_link ul li a {
+    text-decoration: none;
+    color: #222;
+}
+
+.anchor_link ul li a:visited {
+    color: #222;
+}
+
+.anchor_link ul li a img {
+    width: 150px;
+    height: auto;
 }
 
 /* arrow */
@@ -38,6 +100,17 @@ section {
     border-style: solid;
     border-width: 24px 14px 0 14px;
     border-color: #1a458a transparent transparent transparent;
+}
+
+/* google maps */
+
+.google-maps {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.google-maps iframe {
+    height: 200px;
 }
 
 /* for tablets */
@@ -68,6 +141,26 @@ section {
 
     .image-box figure img {
         width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .anchor_link ul {
+        gap: unset;
+    }
+
+    .anchor_link ul li:first-child {
+        display: block;
+        justify-content: unset;
+    }
+    
+    .anchor_link ul li:nth-child(2) {
+        display: block;
+        justify-content: unset;
+    }
+
+    .anchor_link ul li a img {
+        width: 30%;
         height: auto;
     }
 }

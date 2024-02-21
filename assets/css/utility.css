@@ -12,12 +12,16 @@
 }
 
 /* margin */
-.mt0--pc {
+.location-mt-fix {
     margin-top: 0;
 }
 
 .mt50 {
     margin-top: 50px;
+}
+
+.mt100 {
+    margin-top: 100px;
 }
 
 /* text */
@@ -29,6 +33,10 @@ h1 {
 h2 {
     color: #1a458a;
     font-size: 27px;
+}
+
+.text-red {
+    color: #ff0000;
 }
 
 .text-small {
@@ -44,7 +52,10 @@ h2 {
 }
 
 /* align */
-
+.img-center {
+    display: flex;
+    justify-content: center;
+}
 
 @media screen and (max-width: 768px) {
     .pc-area {
@@ -59,7 +70,7 @@ h2 {
         display: block;
     }
 
-    .mt0--pc {
+    .location-mt-fix {
         margin-top: 90px;
     }
 }

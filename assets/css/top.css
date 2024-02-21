@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 .links li a::after {
   position: absolute;
   bottom: -8px;
@@ -12,12 +14,7 @@
   transition: transform 0.3s;
   text-decoration: none;
 }
-
-body {
-  font-family: 'Roboto', sans-serif;
-  -webkit-appearance: none;
-}
-
+ 
 .mv {
   background-image: url(../img/mv_frisbee.jpg);
   background-size: cover;
@@ -35,6 +32,77 @@ body {
 .mv .mv-container .mv-box {
   position: absolute;
   top: 40%;
+}
+
+.mv-text-title {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  color: #232323;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+}
+
+.mv-text-title span {
+  display: block;
+  transform: translate(0, 105%);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+.mv-text-title.-visible span {
+  transform: translate(0, 0);
+}
+
+.mv-text-title span:nth-child(2) {
+  transition-delay: 0.06s;
+}
+.mv-text-title span:nth-child(3) {
+  transition-delay: 0.12s;
+}
+.mv-text-title span:nth-child(4) {
+  transition-delay: 0.18s;
+}
+.mv-text-title span:nth-child(5) {
+  transition-delay: 0.24s;
+}
+.mv-text-title span:nth-child(6) {
+  transition-delay: 0.30s;
+}
+.mv-text-title span:nth-child(7) {
+  transition-delay: 0.36s;
+}
+.mv-text-title span:nth-child(8) {
+  transition-delay: 0.42s;
+}
+.mv-text-title span:nth-child(9) {
+  transition-delay: 0.48s;
+}
+.mv-text-title span:nth-child(10) {
+  transition-delay: 0.54s;
+}
+.mv-text-title span:nth-child(11) {
+  transition-delay: 0.6s;
+}
+.mv-text-title span:nth-child(12) {
+  transition-delay: 0.66s;
+}
+.mv-text-title span:nth-child(13) {
+  transition-delay: 0.72s;
+}
+.mv-text-title span:nth-child(14) {
+  transition-delay: 0.78s;
+}
+.mv-text-title span:nth-child(14) {
+  transition-delay: 0.84s;
+}
+.mv-text-title span:nth-child(15) {
+  transition-delay: 0.90s;
+}
+.mv-text-title span:nth-child(16) {
+  transition-delay: 0.96s;
+}
+.mv-text-title span:nth-child(17) {
+  transition-delay: 1.02s;
 }
 
 .mv-button {
@@ -62,6 +130,7 @@ body {
   position: relative;
   z-index: 3;
   color: #fff;
+  font-weight: 500;
 }
 
 .mv-button__link:hover span{
@@ -373,7 +442,7 @@ body {
   }
 
   .mv {
-    background-image: url(../img/mv_frisbee.jpg);
+    background-image: url(../img/mv_teamwork.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -390,7 +459,8 @@ body {
     position: absolute;
     top: 50%;
     left: 0;
-    margin: 0 1.25rem;
+    right: 0;
+    margin: 0 1rem;
   }
 
   .mv .mv-container .mv-box .mv-text h1 {
@@ -414,7 +484,8 @@ body {
   }
 
   .mv-button {
-    margin-top: 1.875rem;
+    margin: 3.5rem auto 0;
+    width: 70%;
   }
 
   .upcoming-events h2 {

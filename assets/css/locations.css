@@ -2,6 +2,10 @@
     padding-top: 100px;
 }
 
+section {
+    margin-top: 0;
+}
+
 .gym-locations-list {
     padding: 20px;
 }
@@ -18,8 +22,20 @@
     padding: 20px 0;
 }
 
+.gym-locations-list li a span {
+    font-size: 12px;
+}
+
 .gym-locations-list li a:hover {
     color: #7d7d7d;
+}
+
+.text-title h2 {
+    margin: 22px 0 0;
+}
+
+.text-title__japanese {
+    color: #1a458a;
 }
 
 @media screen and (max-width: 768px) {
@@ -34,7 +50,7 @@
 
     .gym-locations-list li {
         border-bottom: 1px solid #1a458a;
-        padding: 15px 0;
+        padding: 15px 0 15px 3px;
     }
 
     .gym-locations-list li a {
