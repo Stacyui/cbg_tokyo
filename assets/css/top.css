@@ -476,7 +476,7 @@
 
   .mv-button__link {
     padding: 15px 30px;
-    border-radius: 0.625rem;
+    border-radius: 2rem;
   }
 
   .mv-button__link span {
@@ -485,7 +485,7 @@
 
   .mv-button {
     margin: 3.5rem auto 0;
-    width: 70%;
+    width: 67%;
   }
 
   .upcoming-events h2 {
