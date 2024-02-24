@@ -159,25 +159,20 @@ header {
     opacity:1;
   }
 
-  .while-bar {
-    position: absolute;
-    top: 68%;
-    left: 15%;
-    width: 77%;
+  #g-nav.panelactive ul li .while-bar {
+    margin-top: 20px;
+    width: 90%;
     height: 1px;
     background-color: #fff;
   }
 
-  #g-nav-list img {
+  #g-nav.panelactive ul li img {
     width: 70px;
     height: auto;
-    margin-right: 20px;
-    position: absolute;
-    top: 71%;
-    left: 15%;
+    margin-top: 20px;
   }
 
-  #g-nav.panelactive ul li, .while-bar, #g-nav-list img {
+  #g-nav.panelactive ul li {
     animation-name:gnaviAnime;
     animation-duration:1s;
     animation-delay:.2s;
