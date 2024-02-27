@@ -110,12 +110,8 @@ section {
 /* google maps */
 
 .google-maps {
-    width: 90%;
+    width: 800px;
     margin: 0 auto;
-}
-
-.google-maps iframe {
-    height: 200px;
 }
 
 /* for tablets */
@@ -167,5 +163,13 @@ section {
     .anchor_link ul li a img {
         width: 30%;
         height: auto;
+    }
+
+    .google-maps {
+        width: 90%;
+    }
+
+    .google-maps iframe {
+        height: 200px;
     }
 }
