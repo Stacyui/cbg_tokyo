@@ -122,7 +122,7 @@ header {
     border-radius: 50%;
     background: #1a458a;
     transform: scale(0);
-    right: -3.125rem;
+    left: -3.125rem;
     top: -3.125rem;
     transition: all .6s;
   }
@@ -212,7 +212,7 @@ header {
     position:fixed;
     /* top:10px; */
     top: 5px;
-    right: 10px;
+    left: 10px;
     z-index: 9999;
     cursor: pointer;
     width: 3.125rem;
